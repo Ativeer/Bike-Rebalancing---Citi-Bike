@@ -74,6 +74,22 @@ The agent can only remove bikes from a station in a quantity of 0, -1, -3, or -1
 - -20 if bike stock becomes negative at any given hour
 
 
+This logic is implemented in rl_brain notebook within the TestScrip folder inside Code directory.
+
+However the main Q Learning Script is written in the Bike Rebalancing notebook.
+
+The DQN code is inspired by MorvanZhou: https://github.com/MorvanZhou
+
+## Results
+
+I tested the script based on the weights it learned (Saved as Expected_Balances.json inside TestScript file), DQ Network perfercted by MorvanZhou.
+Also, this was tested against Linearly increasing Bike stock and actual data (July 2020)
+
+The results are as shown below:
+
+![Linear Input 0th Session Training](https://github.com/Ativeer/Bike-Rebalancing---Citi-Bike/blob/main/performance_log/Linaer%20Data%20Simulation/stock_history/stock_history_020210824235228213583.png)
+
+
 ## Conclusion:
 How does each learning method improve over time after more interaction with the environment?
 
