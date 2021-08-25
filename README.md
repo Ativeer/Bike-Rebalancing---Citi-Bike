@@ -120,5 +120,5 @@ Success Rate : 78%
 ## Conclusion:
 How does each learning method improve over time after more interaction with the environment?
 
-Some methods shown improvement in success rate (keeping bikes between 0 and 50 at hour 23)
-Some variation in performance consistency
+- Some methods shown improvement in success rate (keeping bikes between 0 and 50 at hour 23)
+- Some variation in performance consistency
