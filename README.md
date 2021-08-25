@@ -5,6 +5,18 @@ This README includes the following high level information:
 - Results
 - Future Development Goals
 
+### Key Points to remember:
+
+- Training Code : Code/Bike_Rebalancing.ipynb
+- Test Script : Code/TestScript/main.ipynb
+- Agent Script : Code/TestScript/rl_brain.ipynb
+- Output : performance_logs/
+- Tested against linearly increasing bikes at the stand and Actual Data
+- CitiBike dataset: https://s3.amazonaws.com/tripdata/index.html
+- Weather Data: https://meteostat.net/en/place/US-KT2M?t=2019-07-25/2019-07-31
+- Date Range : April 2019 to July 2019 and March 2020 to June 2020, Tested against July 2020
+
+
 ## Abstract
 Bikes accumulate or deplete quickly at certain popular locations. Companies, such as CitiBike, spend lots of effort and money to manage bike stock at each station to ensure availability to riders throughout the day. Re-balancing is currently monitored and orchestrated by human based on conversation with citiBike frontline operators.
 
@@ -82,13 +94,28 @@ The DQN code is inspired by MorvanZhou: https://github.com/MorvanZhou
 
 ## Results
 
+
 I tested the script based on the weights it learned (Saved as Expected_Balances.json inside TestScript file), DQ Network perfercted by MorvanZhou.
 Also, this was tested against Linearly increasing Bike stock and actual data (July 2020)
 
-The results are as shown below:
+The results can be found in the Performance Logs folder
+
+Brief results are as shown below:
+
+
+- Linear Data
+When Provided with Linear Data, the agent seems to keep the bikes neither overstocked nor Understocked.
 
 ![Linear Input 0th Session Training](https://github.com/Ativeer/Bike-Rebalancing---Citi-Bike/blob/main/performance_log/Linaer%20Data%20Simulation/stock_history/stock_history_020210824235228213583.png)
 
+- Actual Data
+Pragmatically, the bike will never be linearly increasing, thus the agent tries hard to keep up with actual data and sometimes leaves the bike stand understocked.
+
+Success Rate: 92%
+
+![Actual Data with 0th Session Training](https://github.com/Ativeer/Bike-Rebalancing---Citi-Bike/blob/main/performance_log/Actual%20Data/stock_history/stock_history_020210825001521912109.png)
+
+Success Rate : 78%
 
 ## Conclusion:
 How does each learning method improve over time after more interaction with the environment?
